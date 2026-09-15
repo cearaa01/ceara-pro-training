@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ceará Pro Training</title>
+<style>
+:root{--bg:#070707;--card:#111;--text:#f5f5f5;--muted:#b7b7b7;--red:#ff3b30;--red2:#a7120d;--line:#2a2a2a}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:radial-gradient(circle at top,rgba(255,59,48,.16),transparent 32%),#060606;color:var(--text)}
+.wrap{max-width:980px;margin:auto;padding:20px}.hero,.card{background:linear-gradient(180deg,#111,#090909);border:1px solid var(--line);border-radius:22px;padding:24px;margin-bottom:16px}
+.hero{text-align:center;padding:44px 24px}.badge{display:inline-block;border:1px solid var(--red);border-radius:999px;padding:7px 12px;color:#ff8a84;font-weight:700;font-size:12px;letter-spacing:1.5px}
+h1{font-size:clamp(42px,8vw,78px);line-height:.9;margin:18px 0 14px}h1 span{color:var(--red)}.lead{max-width:700px;margin:auto;color:#d0d0d0;line-height:1.6}.slogan{font-weight:900;margin-top:18px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px}.stat{background:#0d0d0d;border:1px solid var(--line);border-radius:16px;padding:18px;text-align:center}.stat b{display:block;color:var(--red);font-size:26px}.stat small{color:var(--muted)}
+h2{margin:0 0 8px}.sub{margin:0 0 20px;color:var(--muted);line-height:1.5}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.full{grid-column:1/-1}
+label{display:block;font-size:13px;font-weight:700;margin-bottom:7px}input,select,textarea{width:100%;background:#080808;color:#fff;border:1px solid #303030;border-radius:12px;padding:13px;font-size:15px;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--red);box-shadow:0 0 0 3px rgba(255,59,48,.08)}textarea{min-height:110px;resize:vertical}
+.players{display:grid;grid-template-columns:1fr 1fr;gap:10px}.checks{display:flex;gap:10px;flex-wrap:wrap}.check{display:flex;align-items:center;gap:8px;background:#080808;border:1px solid #303030;padding:10px 12px;border-radius:10px}.check input{width:auto}
+button{width:100%;padding:16px;border:0;border-radius:13px;background:linear-gradient(90deg,var(--red2),var(--red));color:#fff;font-weight:900;font-size:16px;cursor:pointer}.note,.warning{font-size:12px;line-height:1.5}.note{color:#999;margin-top:10px}.warning{margin-top:14px;background:#1d1607;border:1px solid #6d5118;color:#efd98f;padding:12px;border-radius:10px}
+footer{text-align:center;color:#777;font-size:12px;padding:20px}
+@media(max-width:720px){.stats{grid-template-columns:1fr 1fr}.form-grid,.players{grid-template-columns:1fr}.full{grid-column:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<section class="hero">
+<div class="badge">FREE FIRE • TREINO COMPETITIVO</div>
+<h1>CEARÁ<br><span>PRO TRAINING</span></h1>
+<p class="lead">Ambiente seletivo para equipes que querem elevar o nível, ganhar experiência e chegar mais preparadas para campeonatos de alta competitividade.</p>
+<p class="slogan">AQUI VOCÊ NÃO TREINA PARA PARTICIPAR. TREINA PARA COMPETIR.</p>
+</section>
+
+<div class="stats">
+<div class="stat"><b>12</b><small>equipes selecionadas</small></div>
+<div class="stat"><b>5</b><small>quedas por edição</small></div>
+<div class="stat"><b>R$ 2</b><small>por equipe</small></div>
+<div class="stat"><b>FOCO</b><small>alto nível competitivo</small></div>
+</div>
+
+<section class="card">
+<h2>Candidatura da equipe</h2>
+<p class="sub">Preencha os dados com atenção. A inscrição não garante vaga: as equipes passam por análise da organização.</p>
+
+<form id="form">
+<div class="form-grid">
+<div><label>Nome da equipe *</label><input name="equipe" required placeholder="Nome da equipe"></div>
+<div><label>WhatsApp do responsável *</label><input name="whatsapp" required placeholder="(DDD) 99999-9999"></div>
+
+<div class="full">
+<label>Players *</label>
+<div class="players">
+<input name="player1" required placeholder="Player 1 / nick">
+<input name="player2" required placeholder="Player 2 / nick">
+<input name="player3" required placeholder="Player 3 / nick">
+<input name="player4" required placeholder="Player 4 / nick">
+</div>
+</div>
+
+<div><label>Reserva (opcional)</label><input name="reserva" placeholder="Nick do reserva"></div>
+<div><label>Coach (opcional)</label><input name="coach" placeholder="Nome ou nick do coach"></div>
+
+<div>
+<label>Há quanto tempo jogam juntos? *</label>
+<select name="tempo" required>
+<option value="">Selecione</option>
+<option>Menos de 1 mês</option>
+<option>1 a 3 meses</option>
+<option>3 a 6 meses</option>
+<option>6 meses a 1 ano</option>
+<option>Mais de 1 ano</option>
+</select>
+</div>
+
+<div><label>Instagram da equipe/guilda</label><input name="instagram" placeholder="@suaequipe"></div>
+
+<div class="full">
+<label>Disponibilidade de horário *</label>
+<div class="checks">
+<label class="check"><input type="checkbox" name="horario" value="19h">19h</label>
+<label class="check"><input type="checkbox" name="horario" value="20h">20h</label>
+<label class="check"><input type="checkbox" name="horario" value="21h">21h</label>
+<label class="check"><input type="checkbox" name="horario" value="22h">22h</label>
+<label class="check"><input type="checkbox" name="horario" value="Fim de semana">Fim de semana</label>
+</div>
+</div>
+
+<div class="full">
+<label>Experiência competitiva</label>
+<textarea name="experiencia" placeholder="Campeonatos, ligas ou X-Treinos que a equipe já disputou."></textarea>
+</div>
+
+<div class="full">
+<label>O que a equipe busca melhorar?</label>
+<textarea name="objetivo" placeholder="Conte o que vocês querem desenvolver como equipe."></textarea>
+</div>
+
+<div class="full">
+<button type="submit">ENVIAR CANDIDATURA</button>
+<div class="note">A equipe declara que as informações são verdadeiras e aceita passar pela análise da organização.</div>
+<div class="warning"><b>Importante:</b> o site e o formulário já estão prontos visualmente, mas falta conectar o botão a um serviço que receba as respostas. Posso ligar esse formulário a Google Forms, Formspree ou outro serviço quando você escolher.</div>
+</div>
+</div>
+</form>
+</section>
+
+<section class="card">
+<h2>O que buscamos</h2>
+<p class="sub">Compromisso com horário, respeito entre equipes, comunicação, evolução constante e vontade real de competir em um nível mais alto.</p>
+</section>
+
+<footer>CEARÁ PRO TRAINING • TREINO DE ALTO NÍVEL • COMPETIÇÃO DE VERDADE</footer>
+</div>
+
+<script>
+document.getElementById("form").addEventListener("submit",function(e){
+e.preventDefault();
+const h=document.querySelectorAll('input[name="horario"]:checked');
+if(!h.length){alert("Selecione pelo menos um horário de disponibilidade.");return;}
+alert("Formulário preenchido. Agora falta conectar o envio a um serviço de respostas.");
+});
+</script>
+</body>
+</html>
